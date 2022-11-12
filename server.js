@@ -8,7 +8,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 //used for session cookie
-const session = require("express-session");
+// const session = require("express-session");
 // const passport = require("passport");
 // const passportLocal = require("./utils/passport-local-strategy");
 const route = express.Router()
