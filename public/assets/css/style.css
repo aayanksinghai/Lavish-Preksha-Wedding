@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
+  height: 850px !important;
   float: left;
 }
 #fh5co-counter .display-t,
@@ -1840,4 +1840,38 @@ form label {
   opacity: 0;
 }
 
+#insta{
+    width: 390px;
+    height: 693px;
+    border-radius: 37px;
+}
+
+.instaClass{
+    display:flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 721px) {
+    #insta {    
+        height: 592px;
+        width: 350px;
+            }
+  }
+
+#instaTitle{
+    font-size: 60px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: white;
+    font-family: "Sacramento", Arial, serif;
+}
+
+#instaPara{
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: white;
+}
 /*# sourceMappingURL=style.css.map */
