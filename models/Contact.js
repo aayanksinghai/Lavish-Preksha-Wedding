@@ -8,10 +8,6 @@ const ContactSchema = new mongoose.Schema({
 
     email: {
         type: String
-    },
-
-    invite: {
-        type: Boolean
     }
 })
 

@@ -1,4 +1,5 @@
 const express = require('express')
+const { saveGuestDetails } = require('../controllers/saveRSVP')
 
 //Controllers
 const homePage = require('../controllers/home')
@@ -10,6 +11,10 @@ const route = express.Router()
 
 //GET RESOURCE API
 route.get('/', homePage)
+
+// POST Resource
+route.post('/save', saveGuestDetails)
+
 
 module.exports = route
 
