@@ -229,6 +229,7 @@ h1, h2, h3, h4, h5, h6, figure {
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
+  height: inherit !important;
 }
 
 .fh5co-bg {
@@ -355,7 +356,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-counter,
 #fh5co-event {
-  height: 850px !important;
+  height: 850px;
   float: left;
 }
 #fh5co-counter .display-t,
@@ -1856,6 +1857,10 @@ form label {
         height: 592px;
         width: 350px;
             }
+            .instaSection{
+              height: 850px !important;
+              float: left;
+            }
   }
 
 #instaTitle{
@@ -1873,5 +1878,18 @@ form label {
     letter-spacing: 2px;
     font-weight: 600;
     color: white;
+}
+
+@media screen and (max-width: 480px){
+    #nameHeading{
+        margin-top: 58px !important;
+    }
+}
+.weddingEvent{
+    height: inherit;
+}
+
+.pad{
+    margin-top: 5px;
 }
 /*# sourceMappingURL=style.css.map */
