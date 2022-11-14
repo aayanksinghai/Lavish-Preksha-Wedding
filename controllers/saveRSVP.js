@@ -13,7 +13,10 @@ exports.saveGuestDetails = async (req, res) => {
         console.log(req.body.email);
 
             //Send Email
-            if(req.body.email != null){
+            if (Object.keys(req.body.email).length === 0) {
+                return res.redirect('/');
+            }
+            else if(req.body.email !== null){
             await sendEmail({
                 to: req.body.email,
                 subject: `Wedding Invitation - Lavish & Preksha`,
