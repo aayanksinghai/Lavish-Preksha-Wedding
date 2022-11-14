@@ -48,7 +48,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-2">
-					<div id="fh5co-logo"><a href="/">#Lavsha<strong>.</strong></a></div>
+					<div id="fh5co-logo"><a href="/" id="mainTitle">#Lavsha<strong>.</strong></a></div>
 				</div>
 			</div>
 			
@@ -67,7 +67,8 @@
                             <h2>At</h2>
                             <h2><u><a href="https://g.page/SimchaIsland?share" style="color:white">SIMCHA ISLAND - ADVENTURE PARK & RESORT, MHOW, INDORE </a></u> </h2>
 							<div class="simply-countdown simply-countdown-one"></div>
-							<p><a href="#rsvp" class="more scrolly">RSVP</a></p>
+                            <p id="demo"></p>
+							<p><a href="#rsvp" id="rsvp" class="more scrolly">RSVP</a></p>
 						</div>
 					</div>
 				</div>
@@ -358,10 +359,10 @@
 					
 				</div> -->
 				<!-- Teaser -->
-				<div class="col-md-6 animate-box">
+				<div class="col-md-6  text-center animate-box">
 					<!-- <div class="fh5co-video fh5co-bg" style="background-image: url(assets/images/img_bg_3.jpg); "> -->
 						<!-- <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a> -->
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/FYCjz3ttzGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/FYCjz3ttzGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<!-- <div class="overlay"></div> -->
 					</div>
 				</div>
@@ -369,10 +370,10 @@
 				<!-- Video -->
 				<div class="col-md-6">
 				</div>
-				<div class="col-md-6 animate-box">
+				<div class="col-md-6  text-center animate-box">
 					<!-- <div class="fh5co-video fh5co-bg" style="background-image: url(assets/images/img_bg_3.jpg); "> -->
 						<!-- <a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video2"></i></a> -->
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/SQ71saVjlHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<iframe id="youtube" width="560" height="315" src="https://www.youtube.com/embed/SQ71saVjlHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						<!-- <div class="overlay"></div> -->
 					</div>
 				</div>
@@ -469,22 +470,33 @@
 	<script src="assets/js/main.js"></script>
 
 	<script>
-    var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+    var countDownDate = new Date("Nov 25, 2022 15:37:25").getTime();
 
-    // default example
-    simplyCountdown('.simply-countdown-one', {
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate()
-    });
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-    //jQuery example
-    $('#simply-countdown-losange').simplyCountdown({
-        year: d.getFullYear(),
-        month: d.getMonth() + 1,
-        day: d.getDate(),
-        enableUtc: false
-    });
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 </script>
 
 	</body>

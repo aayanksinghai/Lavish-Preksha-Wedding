@@ -1641,7 +1641,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav-toggle {
-    display: block;
+    display: none;
   }
 }
 
@@ -1892,4 +1892,30 @@ form label {
 .pad{
     margin-top: 5px;
 }
+@media screen and (max-width: 480px){
+    #youtube{
+        width: 320px;
+    }
+    #demo{
+        font-size: 40px !important;
+    }
+    #mainTitle{
+        font-size: 30px !important;
+    }
+}
+
+#demo{
+    font-size: 60px;
+    background-color: #F14E95;
+    color: #fff;
+    display: inline;
+    padding: 5px;
+    border-radius: 20px;
+    font-family: "Work Sans", Arial, sans-serif;
+}
+
+#rsvp{
+    font-size: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
