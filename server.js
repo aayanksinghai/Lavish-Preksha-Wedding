@@ -25,7 +25,7 @@ const routes = require('./routes/index')
 dotenv.config({ path: './config/config.env' })
 
 //Connect to Database
-// connectDB()
+connectDB()
 
 const app = express()
 app.use(bodyParser.json())
