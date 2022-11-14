@@ -7,25 +7,11 @@ const dotenv = require('dotenv')
 //@access Public
 exports.saveGuestDetails = async (req, res) => {
     try {
-        //via WEB APP
-         const dataObj = JSON.parse(req.body);
-         console.log(dataObj)
-
-        
-        //  const myData = new Contact({
-        //     name: req.body.name,
-        //     email: req.body.email
-        //  });
-
-        //  console.log(myData);
-
-         
-        //via POSTMAN
-        // const dataObj = req.body
-        // console.log(dataObj)
-        
-        const contact = await Contact.create(dataObj);
-        res.status(201).json({ success: true, message: `Your Attendance has been received!` })      
+        const contact = await Contact.create(req.body);
+        console.log(req.body.name);
+        console.log(req.body.email);
+        // res.status(201).render('/');
+        return res.redirect('/')  
     } 
     catch (err) {
         console.error(err)
