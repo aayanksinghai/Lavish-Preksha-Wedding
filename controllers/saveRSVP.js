@@ -58,7 +58,7 @@ exports.saveGuestDetails = async (req, res, next) => {
         //Create PDF Template
         // createUserDetails(user, `${uid}_${dataObj.Name}.pdf`, file.name)
 
-        res.status(201).json({ success: true, message: `Your Application has been received!` })      
+        res.status(201).json({ success: true, message: `Your Attendance has been received!` })      
            
     } 
     catch (err) {
